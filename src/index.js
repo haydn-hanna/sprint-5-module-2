@@ -1,8 +1,13 @@
 import './less/index.less'
 
+const title = document.querySelector('.logo-heading')
+const blogLink = document.querySelectorAll('.nav-link')[2]
+const heroImg = document.querySelector('img')
+console.log({title,blogLink,heroImg})
+
 //1: add 'tada' animation to Fun Bus title. 
 //uses animate.css via a CDN link
-const title = document.querySelector('.logo-heading')
+
 title.addEventListener('mouseover',()=>{
     title.classList.add('animate__animated')
     title.classList.add('animate__tada')
@@ -14,14 +19,14 @@ title.addEventListener('animationend',()=>{
 })
 
 //3: redirect when click on blog nav link.
-const blogLink = document.querySelectorAll('.nav-link')[2]
+
 blogLink.addEventListener('click',(event)=>{
     event.preventDefault();
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 })
 
 //4: create carousel of hero image
-const heroImg = document.querySelector('img')
+
 let heroImgIndex = 1;
 heroImg.addEventListener('wheel',(event)=>{
     event.preventDefault()
